@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fit Nawab</title>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/index1.css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/icofont.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/icofont.css" type="text/css" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Century Gothic";
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+
+      .menu {
+        background-color: #b9ebcc;
+        transition: 0.2s ease;
+      }
+
+      .list-ul {
+        /* margin-right: 30px; */
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+      }
+
+      .list-ul a {
+        color: #000;
+        font-style: italic;
+        text-decoration: none;
+        display: block;
+      }
+
+      .nav-active {
+        transform: translateX(0%);
+      }
+
+      .list-ul li {
+        margin-left: 15px;
+        list-style: none;
+      }
+
+      #checkbox {
+        display: none;
+      }
+
+      /* #checkbox:checked ~ .rightmenu ul li {
+        display: block;
+        flex-direction: column;
+      } */
+
+      .menu-bar i {
+        display: none;
+        cursor: pointer;
+        font-size: 25px;
+      }
+
+      .circle-pic img {
+        /* border-radius: 50%; */
+        width: 300px;
+        height: 300px;
+        transition: 0.5s ease-out;
+      }
+
+      .circle-pic {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 100%;
+        transition: 0.5s ease-out;
+        /* justify-content: center;
+        align-items: center; */
+      }
+
+      .circle-pic:hover {
+        -webkit-box-shadow: 2px 0px 23px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 2px 0px 23px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 2px 0px 23px 0px rgba(0, 0, 0, 0.75);
+      }
+
+      .circle-pic img:hover {
+        transform: scale(1.3);
+        transition: 0.5s ease-out;
+      }
+
+      .health-tips-tab .row img {
+        widows: 100px;
+        height: 100px;
+      }
+
+      .health-tips-tab .row p {
+        font-size: 20px;
+        background: -webkit-linear-gradient(45deg, purple, blue);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .contact-me i {
+        /* background: -webkit-linear-gradient(45deg, purple, blue);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+      }
+
+      #fb {
+        background: -webkit-linear-gradient(45deg, blue, blue);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      #whatsapp {
+        background: -webkit-linear-gradient(45deg, green, green);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      #linkedin {
+        background: -webkit-linear-gradient(45deg, blue, skyblue);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      #snapchat {
+        background: -webkit-linear-gradient(45deg, yellow, yellow);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      #instagram {
+        background: -webkit-linear-gradient(45deg, blue, pink);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      #twitter {
+        background: -webkit-linear-gradient(45deg, skyblue, skyblue);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .bg-health {
+        background-image: url("img/download(2).png");
+        width: 100%;
+        height: 100%;
+      }
+
+      .health-tips-tab img {
+        transition: 0.2s ease;
+      }
+
+      .health-tips-tab img:hover {
+        transform: scale(1.2);
+        transition: 0.2s ease;
+      }
+
+      #myVideo {
+        width: 100%;
+        /* position: fixed;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        margin-top: 98px;
+        transform: translateX(-50%) translateY(-50%); */
+      }
+
+      .gallery .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+
+      /* Create four equal columns that sits next to each other */
+      .column {
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+      }
+
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+      }
+
+      /* Responsive layout - makes a two column-layout instead of four columns */
+      @media screen and (max-width: 800px) {
+        .column {
+          flex: 50%;
+          max-width: 50%;
+        }
+      }
+
+      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          flex: 100%;
+          max-width: 100%;
+        }
+      }
+
+      .about-us i {
+        color: grey;
+      }
+
+      .about-us i:hover {
+        color: #fff;
+      }
+
+      .gallery .row .column img {
+        transition: 0.2s ease;
+        border-radius: 10px;
+      }
+
+      .gallery .row .column img:hover {
+        transform: scale(1.05);
+        transition: 0.2s ease;
+        -webkit-box-shadow: 3px 1px 11px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 3px 1px 11px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 3px 1px 11px 0px rgba(0, 0, 0, 0.75);
+      }
+
+      .image-gallery {
+        margin-top: 10%;
+      }
+
+      /* ###################################################################################################
+      ######################################################################################################
+      ######################################################################################################
+      #################################### MEDIA QUERY STARTS HERE ######################################### */
+
+      @media only screen and (max-width: 1556px) {
+        .main-pallete .row h1 {
+          font-size: 90px;
+          margin-top: 25%;
+        }
+
+        .circle-pic {
+          margin-left: 17%;
+          margin-top: 10%;
+        }
+
+        .health-tips-tab-heading h1 {
+          font-size: 80px;
+          transition: 0.2s ease;
+        }
+
+        .health-tips-tab .health-tips-tab-img p {
+          font-size: 40px;
+          transition: 0.2s ease;
+        }
+
+        .about-us-speech h3 {
+          font-size: 20px;
+          margin-top: 5%;
+        }
+
+        .about-us-speech h2 {
+          font-size: 35px;
+        }
+
+        .about-us i {
+          font-size: 40px;
+          margin-top: 5%;
+          text-align: center;
+          transition: 0.2s ease;
+          margin-left: 40%;
+        }
+
+        .contact-me i {
+          margin-left: 50%;
+          font-size: 40px;
+        }
+
+        .contact-me h1 {
+          font-size: 70px;
+        }
+
+        .contact-me h2 {
+          font-size: 20px;
+          margin-top: 10px;
+        }
+
+        .contact-me h3 {
+          font-size: 20px;
+        }
+
+        .contact-me i {
+          margin-top: 5%;
+        }
+      }
+
+      @media only screen and (min-width: 1400px) {
+        .circle-pic {
+          width: 400px;
+          height: 400px;
+        }
+
+        .circle-pic img {
+          width: 400px;
+          height: 400px;
+        }
+      }
+
+      @media only screen and (max-width: 999px) {
+        .main-pallete .row h1 {
+          font-size: 90px;
+          margin-top: 40%;
+          transition: 0.5s ease-in-out;
+        }
+
+        .circle-pic {
+          margin-left: 17%;
+          margin-top: 10%;
+        }
+
+        .health-tips-tab-heading h1 {
+          font-size: 60px;
+          transition: 0.2s ease;
+        }
+
+        .contact-me i {
+          margin-left: 50%;
+          font-size: 30px;
+          background: -webkit-linear-gradient(45deg, purple, blue);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .contact-me h1 {
+          font-size: 70px;
+        }
+
+        .contact-me h2 {
+          font-size: 20px;
+          margin-top: 10px;
+        }
+
+        .contact-me h3 {
+          font-size: 20px;
+        }
+
+        .contact-me i {
+          margin-top: 5%;
+        }
+
+        .health-tips-tab .health-tips-tab-img p {
+          font-size: 40px;
+          transition: 0.2s ease;
+        }
+
+        .about-us-speech h3 {
+          font-size: 15px;
+          margin-top: 5%;
+        }
+
+        .about-us-speech h2 {
+          font-size: 25px;
+        }
+
+        .about-us i {
+          font-size: 40px;
+          margin-top: 5%;
+          text-align: center;
+          transition: 0.2s ease;
+          margin-left: 40%;
+        }
+      }
+
+      @media only screen and (max-width: 883px) {
+        .menu-bar i {
+          display: block;
+        }
+
+        /* .rightmenu ul {
+          display: none;
+        } */
+
+        .list-ul {
+          position: absolute;
+          right: 0px;
+          flex-direction: column;
+          height: 100vh;
+          background-color: #b9ebcc;
+          align-items: center;
+          width: 50%;
+          transform: translateX(100%);
+          top: 8vh;
+          z-index: 1;
+          transition: transform 0.2s ease;
+        }
+
+        .list-ul li {
+          font-size: 20px;
+        }
+
+        .menu-bar i {
+          position: absolute;
+          right: 10%;
+          top: 10px;
+          line-height: 30px;
+        }
+
+        .main-pallete .row h1 {
+          font-size: 70px;
+          margin-top: 30%;
+          transition: 0.5s ease-in-out;
+        }
+
+        .circle-pic {
+          margin-left: 20%;
+          /* margin-top: 10%; */
+        }
+
+        .health-tips-tab-heading h1 {
+          font-size: 65px;
+          transition: 0.2s ease;
+        }
+
+        .health-tips-tab .health-tips-tab-img p {
+          font-size: 35px;
+          transition: 0.2s ease;
+        }
+
+        .contact-me i {
+          margin-left: 50%;
+          font-size: 30px;
+          background: -webkit-linear-gradient(45deg, purple, blue);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .contact-me h1 {
+          font-size: 50px;
+        }
+
+        .contact-me h2 {
+          font-size: 20px;
+          margin-top: 10px;
+        }
+
+        .contact-me h3 {
+          font-size: 20px;
+        }
+
+        .contact-me i {
+          margin-top: 5%;
+        }
+
+        .about-us-speech h3 {
+          font-size: 15px;
+        }
+
+        .about-us-speech h2 {
+          font-size: 25px;
+        }
+
+        .about-us i {
+          font-size: 35px;
+          margin-top: 5%;
+          text-align: center;
+          transition: 0.2s ease;
+          margin-left: 40%;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        .menu-bar i {
+          position: absolute;
+          right: 10%;
+          top: 10px;
+          line-height: 30px;
+        }
+
+        .main-pallete .row h1 {
+          font-size: 60px;
+          margin-top: 0%;
+          transition: 0.5s ease-in-out;
+          text-align: center;
+        }
+
+        .circle-pic {
+          margin-left: 26%;
+          margin-top: 10%;
+        }
+
+        .health-tips-tab-heading h1 {
+          font-size: 60px;
+          transition: 0.2s ease;
+        }
+
+        .health-tips-tab .health-tips-tab-img p {
+          font-size: 35px;
+          transition: 0.2s ease;
+        }
+
+        .contact-me i {
+          margin-left: 50%;
+          font-size: 30px;
+          background: -webkit-linear-gradient(45deg, purple, blue);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .contact-me h1 {
+          font-size: 50px;
+        }
+
+        .contact-me h2 {
+          font-size: 20px;
+          margin-top: 10px;
+        }
+
+        .contact-me i {
+          margin-top: 5%;
+        }
+
+        .about-us-speech h3 {
+          font-size: 15px;
+          margin-top: 5%;
+        }
+
+        .about-us i {
+          font-size: 35px;
+          margin-top: 5%;
+          text-align: center;
+          transition: 0.2s ease;
+          margin-left: 40%;
+        }
+
+        .contact-me h1 {
+          font-size: 50px;
+        }
+
+        .contact-me h2 {
+          font-size: 20px;
+          margin-top: 10px;
+        }
+
+        .contact-me i {
+          margin-top: 5%;
+        }
+      }
+
+      @media only screen and (max-width: 500px) {
+        .leftmenu h1 {
+          font-size: 40px;
+        }
+
+        .menu-bar i {
+          position: absolute;
+          right: 10%;
+          top: 10px;
+          line-height: 30px;
+        }
+
+        /* .rightmenu ul {
+          display: none;
+        } */
+
+        .list-ul {
+          position: absolute;
+          right: 0px;
+          flex-direction: column;
+          height: 100vh;
+          background-color: #b9ebcc;
+          align-items: center;
+          width: 50%;
+          transform: translateX(100%);
+          top: 8vh;
+          z-index: 1;
+          transition: transform 0.2s ease;
+        }
+
+        .list-ul li {
+          font-size: 20px;
+        }
+
+        .main-pallete .row h1 {
+          font-size: 70px;
+          margin-top: 0%;
+          transition: 0.5s ease-in-out;
+        }
+
+        .circle-pic {
+          margin-left: 17%;
+          margin-top: 10%;
+        }
+
+        .health-tips-tab-heading h1 {
+          font-size: 50px;
+          transition: 0.2s ease;
+        }
+
+        .health-tips-tab .health-tips-tab-img p {
+          font-size: 30px;
+          transition: 0.2s ease;
+        }
+
+        .contact-me i {
+          margin-left: 50%;
+          font-size: 30px;
+        }
+
+        .contact-me h1 {
+          font-size: 50px;
+        }
+
+        .contact-me h2 {
+          font-size: 20px;
+          margin-top: 10px;
+        }
+
+        .contact-me i {
+          margin-top: 5%;
+        }
+
+        .about-us-speech h3 {
+          font-size: 15px;
+          margin-top: 5%;
+        }
+
+        .about-us i {
+          font-size: 35px;
+          margin-top: 5%;
+          text-align: center;
+          transition: 0.2s ease;
+          margin-left: 40%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="navbar menu">
+        <div class="leftmenu"><h1 class="text-capitalize">fit nawab</h1></div>
+
+        <!-- <input type="check" id="checkbox" /> -->
+        <span class="menu-bar"
+          ><i class="fa fa-bars burger" aria-hidden="true"></i>
+        </span>
+
+        <div class="rightmenu">
+          <ul class="list-ul nav-active">
+            <a href="">
+              <li class="list-block">Home</li>
+            </a>
+            <a href="">
+              <li class="list-block">Health-Tips</li>
+            </a>
+            <a href="">
+              <li class="list-block">Contact</li>
+            </a>
+            <a href="">
+              <li class="list-block">About me</li>
+            </a>
+            <a href="">
+              <li class="list-block">Health-Counselling</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section style="background-color: #b9ebcc;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,128L34.3,149.3C68.6,171,137,213,206,229.3C274.3,245,343,235,411,208C480,181,549,139,617,106.7C685.7,75,754,53,823,42.7C891.4,32,960,32,1029,53.3C1097.1,75,1166,117,1234,133.3C1302.9,149,1371,139,1406,133.3L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+
+    <section>
+      <div class="main-pallete">
+        <div class="row container-fluid">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-1 text-center">
+            <h1 class="text-capitalize">stay fit</h1>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-2">
+            <div class="circle-pic">
+              <img src="img/main.jpeg" alt="main-pic" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-health" style="background-color: #abf0e9;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,128L34.3,112C68.6,96,137,64,206,58.7C274.3,53,343,75,411,101.3C480,128,549,160,617,144C685.7,128,754,64,823,80C891.4,96,960,192,1029,224C1097.1,256,1166,224,1234,181.3C1302.9,139,1371,85,1406,58.7L1440,32L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"
+        ></path>
+      </svg>
+      <div class="health-tips-tab mt-5 container">
+        <div class="health-tips-tab-heading">
+          <h1 class="text-center text-capitalize">health tips</h1>
+        </div>
+
+        <div class="row container mt-5">
+          <div
+            class="col-12 col-sm-12 col-md-4 col-lg-4 order-1 text-capitalize text-center"
+          >
+            <div class="health-tips-tab-img">
+              <img src="img/harvest.svg" alt="diet-plans" />
+              <p class="text-center">diet plans</p>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-4 col-lg-4 order-2 text-capitalize text-center"
+          >
+            <div class="health-tips-tab-img">
+              <img src="img/workout-machine.svg" alt="workout-tips" />
+              <p class="text-center">workout plans</p>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-4 col-lg-4 order-3 text-capitalize text-center"
+          >
+            <div class="health-tips-tab-img">
+              <img src="img/bulb.svg" alt="special-tips" />
+              <p class="text-center">special tips</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,256L40,256C80,256,160,256,240,234.7C320,213,400,171,480,154.7C560,139,640,149,720,181.3C800,213,880,267,960,272C1040,277,1120,235,1200,197.3C1280,160,1360,128,1400,112L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+
+    <section>
+      <div class="contact-me text-capitalize container">
+        <div class="contact-me-tab container">
+          <h1 class="contact-me-heading text-center text-capitalize mb-4">
+            Contact me
+          </h1>
+
+          <h2 class="text-center text-capitalize mb-5">
+            feel free to contact me on my social media handles .
+          </h2>
+        </div>
+
+        <div class="row container mb-5 contact-me">
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+            <i id="fb" class="fa fa-facebook-official" aria-hidden="true"></i>
+            <h3 class="text-center">nawab_kashyap</h3>
+          </div>
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+            <i id="whatsapp" class="fa fa-whatsapp" aria-hidden="true"></i>
+            <h3 class="text-center">9998887777</h3>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+            <i
+              id="linkedin"
+              class="fa fa-linkedin-square"
+              aria-hidden="true"
+            ></i>
+            <h3 class="text-center">@nawab-kashyap</h3>
+          </div>
+        </div>
+
+        <div class="row container">
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+            <i
+              id="snapchat"
+              class="fa fa-snapchat-square"
+              aria-hidden="true"
+            ></i>
+            <h3 class="text-center">@nawab</h3>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+            <i id="twitter" class="fa fa-twitter-square" aria-hidden="true"></i>
+            <h3 class="text-center">@nawab_kashyap</h3>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+            <i
+              id="instagram"
+              class="fa fa-instagram border-0"
+              aria-hidden="true"
+            ></i>
+            <h3 class="text-center">@nawab_kashyap</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section>
+      <div class="video-tab">
+        <div class="paralax">
+          <div class="video-player">
+            <video autoplay muted loop id="myVideo" height="500px">
+              <source src="img/vid/video.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section
+      class="image-gallery"
+      style="
+        background-image: url('img/download (2).png');
+        background-size: 100% 100%;
+      "
+    >
+      <div class="gallery container">
+        <div class="row">
+          <div class="column">
+            <img src="img/1.jpg" alt="1" />
+
+            <img src="img/3.jpeg" alt="3" />
+            <img src="img/7.jpeg" alt="7" />
+          </div>
+
+          <div class="column">
+            <img src="img/8.jpeg" alt="8" />
+
+            <img src="img/4.jpeg" alt="4" />
+          </div>
+
+          <div class="column">
+            <img src="img/9.jpg" alt="9" />
+            <img src="img/6.jpeg" alt="6" />
+          </div>
+
+          <div class="column">
+            <img src="img/2.jpg" alt="2" />
+            <img src="img/5.jpg" alt="5" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background-color: #393e46;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,320L40,288C80,256,160,192,240,181.3C320,171,400,213,480,240C560,267,640,277,720,261.3C800,245,880,203,960,160C1040,117,1120,75,1200,85.3C1280,96,1360,160,1400,192L1440,224L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"
+        ></path>
+      </svg>
+      <div class="about-us container">
+        <h1 class="heading text-capitalize text-center text-light">about us</h1>
+
+        <div class="div about-us-speech">
+          <h3 class="text-center text-capitalize container text-light">
+            Hello there!!! I am ________. As you have seen above , you can guess
+            who am i ? I am a professional dietition , physical trainer , and
+            body maintainence expert . I am providing some of the best tips and
+            tricks that will shape your body like you ever dreamt of. Our body
+            needs time and diet , if both these are provided in fine ratio then
+            your body will be no less than an aesthatic body. You can follow me
+            on my social media handles which are given below. This page is about
+            learning some methods of perfection , planning a wonderful and
+            healthy diet , focusing on our goal , precise physical training.
+          </h3>
+
+          <h2 class="text-light text-center text-capitalize">
+            stay healthy | stay fit
+          </h2>
+        </div>
+
+        <div class="container mt-3 pb-3">
+          <div class="row container">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+              <a href=""> <i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+              <a href="">
+                <i class="fa fa-snapchat-square" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+              <a href="">
+                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // let checkbox = document.querySelector("#checkbox");
+
+      // menu_bar.addEventListener("click", function () {
+      //   checkbox.click();
+      // });
+
+      // checkbox.addEventListener("click", function () {
+      //   list.style.display = "block";
+      // });
+
+      const menuBar = document.querySelector(".burger");
+
+      const list = document.querySelector(".list-ul");
+
+      menuBar.addEventListener("click", function () {
+        list.classList.toggle("nav-active");
+        console.log("done");
+      });
+    </script>
+
+    <script src="js/jquery-3.4.1.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+* {
+	 padding:0px;
+	 margin:0px;
+}
+
+body {
+	 
+	 background-image: url(../images/Untitled-1.jpg);
+	 background-size: cover;
+     background-repeat: none;
+     overflow-x: hidden;
+
+}
+
+.clearfix:after { /*clearfix is a way for an element to automatically clear its child elements so that you don't need to add additional markup.*/
+	 content:".";
+	  visibility:hidden;
+	  display:block;
+	  height:0px;
+	  clear:both;
+ }
+
+.menu {
+	background-color: rgba(0,0,0,0.5);
+	height:100px;
+    max-width:1532px;
+    position:sticky;
+    top:0;
+}
+
+.leftmenu {
+	 width:20%;
+	 float:left;
+	 height:100px;
+     line-height:100px;
+     margin-left:80px;
+     font-family:'AR DESTINE';
+     font-size: 30px;
+}
+ 
+.leftmenu a {
+	 text-decoration: none;
+	 color:white;
+}
+
+.leftmenu:hover {
+	transition:.5s;
+     transform:scale(1.2);
+}
+
+#rightmenu {    /* WHEN WE ADJUST MENU LIKE IT WE SHOULD TAKE CARE OF WIDTH PRIORLY . BECAUSE IT MAY OCCUR AN ERROR IN FUTURE . IF PUT LIST IS ADJOINIG BELOW 
+                     THEN WE MUST CHECK THE WIDTH OF EITHER LEFTMENU OR RIGHTMENU . */
+     float:right;    
+	 width:70%;
+     font-size:15px;
+     font-family: 'flamenco' ,cursive ;
+}
+
+#rightmenu li {
+	 display:inline-block;
+	 line-height:100px;
+     margin-left:50px;
+  
+}
+
+#rightmenu a{
+	 text-decoration: none;
+	 color:white;
+     border-bottom:1.5px solid transparent;
+     
+
+}
+
+#rightmenu a:hover {
+	   color:orange;
+	   transition:1s ease;
+	   animation: animate 1s linear;
+
+}
+
+@-webkit-keyframes animate {
+	 	0% {
+
+	 		 width:0%;
+             border-bottom-color:transparent;
+             transition:1.5s ease;
+
+	 	}
+
+	 	50% {
+
+	 		 width:25%;
+	 		 border-bottom-color:white;
+	 		 padding-bottom:16px;
+	 		 font-weight:bold;
+	 		 transition:1.5s ease;
+	 		
+	 	}
+
+	 	100% {
+	 		width:100%;
+	 		border-bottom-color:white;
+            font-weight:bold;
+            transition:1.5s ease;
+	 	}
+}
+
+
+
+/*.main h1{
+	 margin-top:400px;
+	 font-size:80px;
+     font-family: 'Burnstown Dam';
+     margin-left:15px;
+     border-radius: 10% 10% 10% 10%;
+     background-color:rgba(0,0,0,0.3);
+     box-shadow:8px 3px 60px #000000;
+     width:45%;
+     float:left;
+     
+ } 
+
+#move {
+	animation: colorful 1.5s infinite;
+}
+	
+@-webkit-keyframes colorful {
+	   0% {
+	   	  color:red;
+	   }
+
+	   25% {
+	   	 color:white;
+	   }
+	   50% {
+	   	 color:orange;
+	   }
+	   75% {
+	   	 color:green;
+	   }
+	   100% {
+	   	 color:yellow;
+	   }
+}
+ */
+
+.box {
+	 width: 100%;
+	 float:right;
+	 /*border-radius:100px;*/
+	 height: 100px;	
+	 background-color:rgba(20,20,20,0.7);
+	 position: absolute;
+	 top:86.5%;
+}
+
+.box a{
+	 text-decoration: none;
+	 line-height:100px;
+	 margin-left: 20px;
+	 color:white;
+}
