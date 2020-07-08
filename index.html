@@ -15,6 +15,7 @@
       rel="stylesheet"
       type="text/css"
     />
+
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/index1.css" />
@@ -28,12 +29,34 @@
     <link rel="stylesheet" type="text/css" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icofont.min.css" type="text/css" />
     <link rel="stylesheet" href="css/icofont.css" type="text/css" />
+    <link rel="stylesheet" href="font/flaticon.css" type="text/css" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/fontawesome.min.js"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="resources/filename" />
 
     <style>
       * {
         margin: 0;
         padding: 0;
-        font-family: "Century Gothic";
+        font-family: "Montserrat", sans-serif;
+      }
+
+      h1 {
+        text-shadow: 4px 1px 2px rgba(0, 0, 0, 0.5);
       }
 
       body {
@@ -45,25 +68,26 @@
         transition: 0.2s ease;
       }
 
-      .list-ul {
+      .leftmenu h1 a {
+        font-size: 40px;
+      }
+
+      .rightmenu ul {
         /* margin-right: 30px; */
         display: flex;
         width: 100%;
         justify-content: space-around;
+        z-index: 0;
       }
 
-      .list-ul a {
+      .rightmenu ul a {
         color: #000;
         font-style: italic;
         text-decoration: none;
         display: block;
       }
 
-      .nav-active {
-        transform: translateX(0%);
-      }
-
-      .list-ul li {
+      .rightmenu ul li {
         margin-left: 15px;
         list-style: none;
       }
@@ -77,11 +101,24 @@
         flex-direction: column;
       } */
 
-      .menu-bar i {
+      .burger-line {
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+        background-color: #000;
+        transition: all 0.2s ease;
+      }
+
+      .burger {
+        display: none;
+        cursor: pointer;
+      }
+
+      /* .menu-bar i {
         display: none;
         cursor: pointer;
         font-size: 25px;
-      }
+      } */
 
       .circle-pic img {
         /* border-radius: 50%; */
@@ -255,6 +292,41 @@
         margin-top: 10%;
       }
 
+      .main-pallete h1 {
+        /* text-shadow: 4px 1px 3px rgba(150, 150, 150, 1); */
+        text-shadow: 4px 1px 2px rgba(150, 150, 150, 1);
+      }
+
+      .health-counselling-heading h1 {
+        font-size: 70px;
+      }
+
+      .paralax-section {
+        background-image: url("img/kelly-sikkema-IZOAOjvwhaM-unsplash.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      .workout-from-home-heading h1 {
+        font-size: 70px;
+        color: #fff;
+      }
+
+      .workout-from-home-body h2 {
+        color: #fff;
+      }
+
+      .workout-from-home-images img {
+        width: 100px;
+        height: 100px;
+        transition: 0.2s ease;
+      }
+
+      .workout-from-home-images img:hover {
+        transform: scale(1.2);
+        transition: 0.2s ease;
+      }
+
       /* ###################################################################################################
       ######################################################################################################
       ######################################################################################################
@@ -267,8 +339,16 @@
         }
 
         .circle-pic {
-          margin-left: 17%;
-          margin-top: 10%;
+          /* margin-left: 17%;
+          margin-top: 10%; */
+          display: block;
+          margin: 0 auto;
+          transition: 0.2s ease;
+          margin-top: 5%;
+          margin-bottom: 3%;
+          /* width: 100px;
+          height: 100px; */
+          transition: 0.2s ease;
         }
 
         .health-tips-tab-heading h1 {
@@ -319,6 +399,43 @@
         .contact-me i {
           margin-top: 5%;
         }
+
+        .health-counselling-heading h1 {
+          font-size: 70px;
+        }
+
+        .health-counselling-body h2 {
+          font-size: 25px;
+          margin-top: 5%;
+          transition: 0.2s ease;
+        }
+
+        .workout-from-home-heading h1 {
+          font-size: 70px;
+          color: #fff;
+          transition: 0.2s ease;
+        }
+
+        .workout-from-home-body h2 {
+          color: #fff;
+          font-size: 20px;
+          transition: 0.2s ease;
+        }
+
+        .workout-from-home-images img {
+          display: block;
+          margin: 0 auto;
+          transition: 0.2s ease;
+          margin-top: 5%;
+          margin-bottom: 3%;
+          width: 150px;
+          height: 150px;
+          transition: 0.2s ease;
+        }
+
+        .workout-from-home-images h3 {
+          font-size: 30px;
+        }
       }
 
       @media only screen and (min-width: 1400px) {
@@ -341,8 +458,16 @@
         }
 
         .circle-pic {
-          margin-left: 17%;
-          margin-top: 10%;
+          /* margin-left: 17%;
+          margin-top: 10%; */
+          display: block;
+          margin: 0 auto;
+          transition: 0.2s ease;
+          margin-top: 5%;
+          margin-bottom: 3%;
+          /* width: 100px;
+          height: 100px; */
+          transition: 0.2s ease;
         }
 
         .health-tips-tab-heading h1 {
@@ -360,19 +485,23 @@
 
         .contact-me h1 {
           font-size: 70px;
+          transition: 0.2s ease;
         }
 
         .contact-me h2 {
           font-size: 20px;
           margin-top: 10px;
+          transition: 0.2s ease;
         }
 
         .contact-me h3 {
           font-size: 20px;
+          transition: 0.2s ease;
         }
 
         .contact-me i {
           margin-top: 5%;
+          transition: 0.2s ease;
         }
 
         .health-tips-tab .health-tips-tab-img p {
@@ -383,10 +512,12 @@
         .about-us-speech h3 {
           font-size: 15px;
           margin-top: 5%;
+          transition: 0.2s ease;
         }
 
         .about-us-speech h2 {
           font-size: 25px;
+          transition: 0.2s ease;
         }
 
         .about-us i {
@@ -395,6 +526,44 @@
           text-align: center;
           transition: 0.2s ease;
           margin-left: 40%;
+        }
+
+        .health-counselling-heading h1 {
+          font-size: 50px;
+          transition: 0.2s ease;
+        }
+
+        .health-counselling-body h2 {
+          font-size: 20px;
+          margin-top: 5%;
+          transition: 0.2s ease;
+        }
+
+        .workout-from-home-heading h1 {
+          font-size: 50px;
+          color: #fff;
+          transition: 0.2s ease;
+        }
+
+        .workout-from-home-body h2 {
+          color: #fff;
+          font-size: 17px;
+          transition: 0.2s ease;
+        }
+
+        .workout-from-home-images h3 {
+          font-size: 30px;
+        }
+
+        .workout-from-home-images img {
+          display: block;
+          margin: 0 auto;
+          transition: 0.2s ease;
+          margin-top: 5%;
+          margin-bottom: 3%;
+          width: 150px;
+          height: 150px;
+          transition: 0.2s ease;
         }
       }
 
@@ -407,7 +576,7 @@
           display: none;
         } */
 
-        .list-ul {
+        .rightmenu ul {
           position: absolute;
           right: 0px;
           flex-direction: column;
@@ -421,7 +590,7 @@
           transition: transform 0.2s ease;
         }
 
-        .list-ul li {
+        .rightmenu ul li {
           font-size: 20px;
         }
 
@@ -432,7 +601,16 @@
           line-height: 30px;
         }
 
-        .main-pallete .row h1 {
+        .burger {
+          display: block;
+          z-index: 10;
+        }
+
+        .list-ul {
+          visibility: hidden;
+          display: none;
+        }
+        v .main-pallete .row h1 {
           font-size: 70px;
           margin-top: 30%;
           transition: 0.5s ease-in-out;
@@ -463,27 +641,33 @@
 
         .contact-me h1 {
           font-size: 50px;
+          transition: 0.2s ease;
         }
 
         .contact-me h2 {
           font-size: 20px;
           margin-top: 10px;
+          transition: 0.2s ease;
         }
 
         .contact-me h3 {
           font-size: 20px;
+          transition: 0.2s ease;
         }
 
         .contact-me i {
           margin-top: 5%;
+          transition: 0.2s ease;
         }
 
         .about-us-speech h3 {
           font-size: 15px;
+          transition: 0.2s ease;
         }
 
         .about-us-speech h2 {
           font-size: 25px;
+          transition: 0.2s ease;
         }
 
         .about-us i {
@@ -492,6 +676,29 @@
           text-align: center;
           transition: 0.2s ease;
           margin-left: 40%;
+        }
+
+        .health-counselling-heading h1 {
+          font-size: 50px;
+          transition: 0.2s ease;
+        }
+
+        .health-counselling-body h2 {
+          font-size: 17px;
+          margin-top: 5%;
+          transition: 0.2s ease;
+        }
+
+        .workout-from-home-heading h1 {
+          font-size: 50px;
+          color: #fff;
+          transition: 0.2s ease;
+        }
+
+        .workout-from-home-body h2 {
+          color: #fff;
+          font-size: 17px;
+          transition: 0.2s ease;
         }
       }
 
@@ -503,6 +710,16 @@
           line-height: 30px;
         }
 
+        .burger {
+          display: block;
+          z-index: 10;
+        }
+
+        .list-ul {
+          visibility: hidden;
+          display: none;
+        }
+
         .main-pallete .row h1 {
           font-size: 60px;
           margin-top: 0%;
@@ -511,8 +728,16 @@
         }
 
         .circle-pic {
-          margin-left: 26%;
-          margin-top: 10%;
+          /* margin-left: 17%;
+          margin-top: 10%; */
+          display: block;
+          margin: 0 auto;
+          transition: 0.2s ease;
+          margin-top: 5%;
+          margin-bottom: 3%;
+          /* width: 100px;
+          height: 100px; */
+          transition: 0.2s ease;
         }
 
         .health-tips-tab-heading h1 {
@@ -535,6 +760,7 @@
 
         .contact-me h1 {
           font-size: 50px;
+          transition: 0.2s ease;
         }
 
         .contact-me h2 {
@@ -571,10 +797,41 @@
         .contact-me i {
           margin-top: 5%;
         }
+
+        .health-counselling-heading h1 {
+          font-size: 50px;
+        }
+
+        .health-counselling-body h2 {
+          font-size: 17px;
+          margin-top: 5%;
+          transition: 0.2s ease;
+        }
+
+        .workout-from-home-heading h1 {
+          font-size: 50px;
+          color: #fff;
+        }
+
+        .workout-from-home-body h2 {
+          color: #fff;
+          font-size: 17px;
+        }
+
+        .workout-from-home-images img {
+          display: block;
+          margin: 0 auto;
+          transition: 0.2s ease;
+          margin-top: 5%;
+          margin-bottom: 3%;
+          width: 100px;
+          height: 100px;
+          transition: 0.2s ease;
+        }
       }
 
       @media only screen and (max-width: 500px) {
-        .leftmenu h1 {
+        .leftmenu h1 a {
           font-size: 40px;
         }
 
@@ -585,11 +842,16 @@
           line-height: 30px;
         }
 
+        .burger {
+          display: block;
+          z-index: 10;
+        }
+
         /* .rightmenu ul {
           display: none;
         } */
 
-        .list-ul {
+        .rightmenu ul {
           position: absolute;
           right: 0px;
           flex-direction: column;
@@ -598,12 +860,18 @@
           align-items: center;
           width: 50%;
           transform: translateX(100%);
-          top: 8vh;
+          top: 7vh;
           z-index: 1;
-          transition: transform 0.2s ease;
+
+          /* transition: transform 0.2s ease; */
         }
 
-        .list-ul li {
+        .list-ul {
+          visibility: hidden;
+          display: none;
+        }
+
+        .rightmenu ul li {
           font-size: 20px;
         }
 
@@ -614,8 +882,16 @@
         }
 
         .circle-pic {
-          margin-left: 17%;
-          margin-top: 10%;
+          /* margin-left: 17%;
+          margin-top: 10%; */
+          display: block;
+          margin: 0 auto;
+          transition: 0.2s ease;
+          margin-top: 5%;
+          margin-bottom: 3%;
+          /* width: 100px;
+          height: 100px; */
+          transition: 0.2s ease;
         }
 
         .health-tips-tab-heading h1 {
@@ -658,40 +934,100 @@
           transition: 0.2s ease;
           margin-left: 40%;
         }
+
+        .health-counselling-heading h1 {
+          font-size: 50px;
+        }
+
+        .health-counselling-body h2 {
+          font-size: 17px;
+          margin-top: 5%;
+          margin-bottom: 5%;
+          transition: 0.2s ease;
+        }
+
+        .workout-from-home-heading h1 {
+          font-size: 50px;
+          color: #fff;
+          transition: 0.2s ease;
+        }
+
+        .workout-from-home-body h2 {
+          color: #fff;
+          font-size: 17px;
+          transition: 0.2s ease;
+        }
+
+        .workout-from-home-images img {
+          display: block;
+          margin: 0 auto;
+          transition: 0.2s ease;
+          margin-top: 5%;
+          margin-bottom: 3%;
+          width: 100px;
+          height: 100px;
+          transition: 0.2s ease;
+        }
+
+        body {
+          width: 100%;
+        }
+      }
+
+      .navigation.open {
+        transform: translateX(0%);
+        transition: transform 0.5s ease;
+        visibility: visible;
       }
     </style>
   </head>
   <body>
-    <section>
+    <nav class="">
       <div class="navbar menu">
-        <div class="leftmenu"><h1 class="text-capitalize">fit nawab</h1></div>
+        <div class="leftmenu">
+          <h1 class="text-capitalize">
+            <a href="index.html" class="text-decoration-none text-dark"
+              >fit nawab</a
+            >
+          </h1>
+        </div>
 
         <!-- <input type="check" id="checkbox" /> -->
-        <span class="menu-bar"
+        <!-- <span class="menu-bar"
           ><i class="fa fa-bars burger" aria-hidden="true"></i>
-        </span>
+        </span> -->
 
         <div class="rightmenu">
-          <ul class="list-ul nav-active">
-            <a href="">
+          <ul class="list-ul nav-active navigation">
+            <a href="index.html">
               <li class="list-block">Home</li>
             </a>
-            <a href="">
+
+            <a href="#health-tips">
               <li class="list-block">Health-Tips</li>
             </a>
-            <a href="">
-              <li class="list-block">Contact</li>
-            </a>
-            <a href="">
-              <li class="list-block">About me</li>
-            </a>
-            <a href="">
+
+            <a href="#health-counselling">
               <li class="list-block">Health-Counselling</li>
             </a>
+
+            <a href="#contact-me">
+              <li class="list-block">Contact</li>
+            </a>
+
+            <a href="#about-me">
+              <li class="list-block">About me</li>
+            </a>
           </ul>
+
+          <div class="burger">
+            <div class="burger-line line1"></div>
+            <div class="burger-line line2"></div>
+            <div class="burger-line line3"></div>
+          </div>
         </div>
       </div>
-    </section>
+    </nav>
 
     <section style="background-color: #b9ebcc;">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -703,7 +1039,7 @@
       </svg>
     </section>
 
-    <section>
+    <section class="stay-fit-bg">
       <div class="main-pallete">
         <div class="row container-fluid">
           <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-1 text-center">
@@ -719,7 +1055,11 @@
       </div>
     </section>
 
-    <section class="bg-health" style="background-color: #abf0e9;">
+    <section
+      class="bg-health"
+      style="background-color: #abf0e9;"
+      id="health-tips"
+    >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#fff"
@@ -768,7 +1108,85 @@
       </svg>
     </section>
 
-    <section>
+    <section id="health-counselling">
+      <div class="health-counselling-heading container">
+        <h1 class="text-center text-capitalize">health counselling</h1>
+      </div>
+
+      <div class="health-counselling-body">
+        <h2 class="text-center text-capitalize container">
+          health counselling will be held occasionally on my social media
+          handles or on my blog. Health counselling provides us the motivation
+          and the precise ways to do the workout. this will help many of you as
+          a reason to lift the weights. some of us are full of energy but cannot
+          do without a push start, then this will affect those as a push start.
+          i am not perfect but still i am living a perfect life by understanding
+          some basic concepts of life. bodybuilding does not include only
+          physical training , it includes mental training as well. you must be
+          thinking how? every bodybuilder needs a muscle mind connection while
+          lifting.
+
+          <p
+            class="text-center text-capitalize container"
+            style="font-style: italic; font-family: 'courier new';"
+          >
+            "Physical actvity enhances positive energy"
+          </p>
+        </h2>
+      </div>
+    </section>
+
+    <section class="paralax-section mt-5">
+      <div class="workout-from-home-heading">
+        <h1 class="text-center text-capitalize container">workout from home</h1>
+      </div>
+
+      <div class="workout-from-home-body container">
+        <h2 class="container text-center text-capitalize">
+          Nowadays , we all know that an unwanted virus is roaming on the
+          streets. we need to keep ourselves safe from it. because of this virus
+          (covid-19) all the gym or gathering points are closed. but it does not
+          mean that we cannot workout . we can do the workout at our homes.
+        </h2>
+
+        <div class="container workout-from-home-images">
+          <div class="row container mt-5 mb-5 pb-5">
+            <div
+              class="col-12 col-sm-12 col-md-4 col-lg-4 order-1 text-capitalize text-center"
+            >
+              <div class="">
+                <img src="img/dumbell.png" alt="diet-plans" />
+                <h3 class="text-center text-capitalize text-white">
+                  diet plans
+                </h3>
+              </div>
+            </div>
+            <div
+              class="col-12 col-sm-12 col-md-4 col-lg-4 order-2 text-capitalize text-center"
+            >
+              <div class="">
+                <img src="img/push-up.png" alt="workout-tips" />
+                <h3 class="text-center text-capitalize text-white">
+                  workout plans
+                </h3>
+              </div>
+            </div>
+            <div
+              class="col-12 col-sm-12 col-md-4 col-lg-4 order-3 text-capitalize text-center"
+            >
+              <div class="">
+                <img src="img/banana.png" alt="special-tips" />
+                <h3 class="text-center text-capitalize text-white">
+                  special tips
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-me">
       <div class="contact-me text-capitalize container">
         <div class="contact-me-tab container">
           <h1 class="contact-me-heading text-center text-capitalize mb-4">
@@ -874,7 +1292,7 @@
       </div>
     </section>
 
-    <section style="background-color: #393e46;">
+    <section style="background-color: #393e46;" class="bg-about">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#fff"
@@ -924,23 +1342,44 @@
     </section>
 
     <script>
-      // let checkbox = document.querySelector("#checkbox");
+      // const menuBar = document.querySelector(".burger");
 
-      // menu_bar.addEventListener("click", function () {
-      //   checkbox.click();
+      // const list = document.querySelector(".list-ul");
+
+      // menuBar.addEventListener("click", function () {
+      //   list.classList.toggle("nav-active");
+      //   console.log("done");
       // });
 
-      // checkbox.addEventListener("click", function () {
-      //   list.style.display = "block";
-      // });
+      // const navSlide = () => {
+      //   const burger = document.querySelector(".burger");
+      //   const nav = document.querySelector(".rightmenu ul");
+      //   const navLinks = document.querySelectorAll(".nav-link");
 
-      const menuBar = document.querySelector(".burger");
+      //   burger.addEventListener("click", () => {
+      //     //Toggle Nav
+      //     nav.classList.toggle("nav-active");
+      //   });
+      // };
+      // navSlide();
 
-      const list = document.querySelector(".list-ul");
+      var btn = document.querySelector(".burger");
+      var menu = document.querySelector(".navigation");
+      let bgAbout = document.querySelector(".bg-about");
 
-      menuBar.addEventListener("click", function () {
-        list.classList.toggle("nav-active");
-        console.log("done");
+      btn.addEventListener("click", toggleMenu);
+      menu.addEventListener("click", toggleMenu);
+
+      function toggleMenu() {
+        if (menu.classList.contains("open")) {
+          menu.classList.remove("open");
+        } else {
+          menu.classList.add("open");
+        }
+      }
+
+      bgAbout.addEventListener("mousemove", function (e) {
+        document.bgAbout.style.backgroundColor = `rgb( ${e.offsetX} , ${e.offsetY}, ${e.offsetX})`;
       });
     </script>
 

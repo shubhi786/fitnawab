@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Responsive Nav</title>
+
+    <style>
+      body {
+        background: #111;
+        margin: 0;
+        padding: 0;
+      }
+
+      /*:::: NAVIGATION ::::*/
+
+      .background-nav {
+        background-image: linear-gradient(45deg, #888 2%, transparent 10%);
+        background-position: 0 0, 1px 0, 1px -1px, 0px 1px;
+        background-size: 3px 3px;
+      }
+
+      .nav {
+        display: flex;
+        max-width: 1800px;
+        margin: 0 auto;
+        padding: 1em 3.5em;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 30vh;
+      }
+
+      .navigation {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style: none;
+        z-index: 0;
+        cursor: pointer;
+      }
+
+      .nav-item {
+        position: relative;
+        letter-spacing: 4px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #444;
+        margin: 0 0 0 3em;
+        font-family: "Raleway", sans-serif;
+        transition: all 0.3s ease-in-out;
+      }
+
+      /* :: MOBILE-NAV :::: */
+
+      .burger-line {
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+        background-color: #595959;
+        transition: all 0.2s ease;
+      }
+
+      .burger {
+        display: none;
+        cursor: pointer;
+      }
+
+      @media screen and (max-width: 1000px) {
+        html {
+          font-size: 14px;
+        }
+
+        body {
+          overflow-x: hidden;
+        }
+
+        .burger {
+          display: block;
+          z-index: 10;
+        }
+
+        .navigation {
+          position: absolute;
+          right: 0;
+          top: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          height: 100vh;
+          transform: translateX(100%);
+          padding: 2em 0 2em 0;
+          margin-top: 0;
+          z-index: 5;
+          background: #f2f2f2;
+        }
+
+        .nav-link {
+          opacity: 0;
+        }
+      }
+
+      @keyframes navLinkFade {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateX(0px);
+        }
+      }
+
+      .navigation-active {
+        transform: translateX(0%);
+        transition: transform 0.5s ease;
+      }
+
+      .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+
+      .toggle .line2 {
+        opacity: 0;
+      }
+
+      .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="background-nav">
+      <nav class="nav">
+        <a class="logo" href="#">
+          <img src="logo/logo.png" alt="Logo" />
+        </a>
+
+        <ul class="navigation circle">
+          <li class="nav-link"><a href="#home" class="nav-item">Home</a></li>
+          <li class="nav-link">
+            <a href="#service" class="nav-item">Service</a>
+          </li>
+          <li class="nav-link"><a href="#team" class="nav-item">Team</a></li>
+          <li class="nav-link">
+            <a href="#ambient" class="nav-item">Ambiente</a>
+          </li>
+          <li class="nav-link">
+            <a href="#contact" class="nav-item">Kontakt</a>
+          </li>
+        </ul>
+
+        <div class="burger">
+          <div class="burger-line line1"></div>
+          <div class="burger-line line2"></div>
+          <div class="burger-line line3"></div>
+        </div>
+      </nav>
+    </div>
+
+    <script>
+      const navSlide = () => {
+        const burger = document.querySelector(".burger");
+        const nav = document.querySelector(".navigation");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        burger.addEventListener("click", () => {
+          //Toggle Nav
+          nav.classList.toggle("navigation-active");
+
+          //Animate Links
+          navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+              link.style.animation = "";
+            } else {
+              link.style.animation = `navLinkFade 0.5s ease forwards ${
+                index / 7 + 0.5
+              }s`;
+            }
+          });
+          //Burger Animation
+          burger.classList.toggle("toggle");
+        });
+      };
+
+      navSlide();
+    </script>
+  </body>
+</html>
