@@ -1,162 +1,1166 @@
 * {
-	 padding:0px;
-	 margin:0px;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  text-shadow: 4px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body {
-	 
-	 background-image: url(../images/Untitled-1.jpg);
-	 background-size: cover;
-     background-repeat: none;
-     overflow-x: hidden;
-
+  overflow-x: hidden;
 }
-
-.clearfix:after { /*clearfix is a way for an element to automatically clear its child elements so that you don't need to add additional markup.*/
-	 content:".";
-	  visibility:hidden;
-	  display:block;
-	  height:0px;
-	  clear:both;
- }
 
 .menu {
-	background-color: rgba(0,0,0,0.5);
-	height:100px;
-    max-width:1532px;
-    position:sticky;
-    top:0;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: 0.2s ease;
+  -webkit-box-shadow: 0px 7px 22px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 7px 22px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 7px 22px -6px rgba(0, 0, 0, 0.75);
+  border-radius: 0px 0px 10px 10px;
 }
 
-.leftmenu {
-	 width:20%;
-	 float:left;
-	 height:100px;
-     line-height:100px;
-     margin-left:80px;
-     font-family:'AR DESTINE';
-     font-size: 30px;
-}
- 
-.leftmenu a {
-	 text-decoration: none;
-	 color:white;
+.leftmenu h1 a {
+  font-size: 40px;
+  color: whitesmoke;
 }
 
-.leftmenu:hover {
-	transition:.5s;
-     transform:scale(1.2);
+.rightmenu ul {
+  /* margin-right: 30px; */
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  z-index: 0;
 }
 
-#rightmenu {    /* WHEN WE ADJUST MENU LIKE IT WE SHOULD TAKE CARE OF WIDTH PRIORLY . BECAUSE IT MAY OCCUR AN ERROR IN FUTURE . IF PUT LIST IS ADJOINIG BELOW 
-                     THEN WE MUST CHECK THE WIDTH OF EITHER LEFTMENU OR RIGHTMENU . */
-     float:right;    
-	 width:70%;
-     font-size:15px;
-     font-family: 'flamenco' ,cursive ;
+.rightmenu ul a {
+  color: white;
+  font-style: italic;
+  text-decoration: none;
+  display: block;
 }
 
-#rightmenu li {
-	 display:inline-block;
-	 line-height:100px;
-     margin-left:50px;
-  
+.rightmenu ul li {
+  margin-left: 15px;
+  list-style: none;
 }
 
-#rightmenu a{
-	 text-decoration: none;
-	 color:white;
-     border-bottom:1.5px solid transparent;
-     
-
+#checkbox {
+  display: none;
 }
 
-#rightmenu a:hover {
-	   color:orange;
-	   transition:1s ease;
-	   animation: animate 1s linear;
+/* #checkbox:checked ~ .rightmenu ul li {
+        display: block;
+        flex-direction: column;
+      } */
 
+.burger-line {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: whitesmoke;
+  transition: all 0.2s ease;
 }
 
-@-webkit-keyframes animate {
-	 	0% {
-
-	 		 width:0%;
-             border-bottom-color:transparent;
-             transition:1.5s ease;
-
-	 	}
-
-	 	50% {
-
-	 		 width:25%;
-	 		 border-bottom-color:white;
-	 		 padding-bottom:16px;
-	 		 font-weight:bold;
-	 		 transition:1.5s ease;
-	 		
-	 	}
-
-	 	100% {
-	 		width:100%;
-	 		border-bottom-color:white;
-            font-weight:bold;
-            transition:1.5s ease;
-	 	}
+.burger {
+  display: none;
+  cursor: pointer;
 }
 
+/* .menu-bar i {
+        display: none;
+        cursor: pointer;
+        font-size: 25px;
+      } */
 
-
-/*.main h1{
-	 margin-top:400px;
-	 font-size:80px;
-     font-family: 'Burnstown Dam';
-     margin-left:15px;
-     border-radius: 10% 10% 10% 10%;
-     background-color:rgba(0,0,0,0.3);
-     box-shadow:8px 3px 60px #000000;
-     width:45%;
-     float:left;
-     
- } 
-
-#move {
-	animation: colorful 1.5s infinite;
-}
-	
-@-webkit-keyframes colorful {
-	   0% {
-	   	  color:red;
-	   }
-
-	   25% {
-	   	 color:white;
-	   }
-	   50% {
-	   	 color:orange;
-	   }
-	   75% {
-	   	 color:green;
-	   }
-	   100% {
-	   	 color:yellow;
-	   }
-}
- */
-
-.box {
-	 width: 100%;
-	 float:right;
-	 /*border-radius:100px;*/
-	 height: 100px;	
-	 background-color:rgba(20,20,20,0.7);
-	 position: absolute;
-	 top:86.5%;
+.carousel-inner {
+  height: 600px;
 }
 
-.box a{
-	 text-decoration: none;
-	 line-height:100px;
-	 margin-left: 20px;
-	 color:white;
+.circle-pic img {
+  /* border-radius: 50%; */
+  width: 300px;
+  height: 300px;
+  transition: 0.5s ease-out;
+}
+
+.circle-pic {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 100%;
+  transition: 0.5s ease-out;
+  /* justify-content: center;
+        align-items: center; */
+}
+
+.circle-pic:hover {
+  -webkit-box-shadow: 2px 0px 23px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 0px 23px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 0px 23px 0px rgba(0, 0, 0, 0.75);
+}
+
+.circle-pic img:hover {
+  transform: scale(1.3);
+  transition: 0.5s ease-out;
+}
+
+.health-tips-tab .row img {
+  widows: 100px;
+  height: 100px;
+}
+
+.health-tips-tab .row p {
+  font-size: 20px;
+  background: -webkit-linear-gradient(45deg, purple, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-me i {
+  /* background: -webkit-linear-gradient(45deg, purple, blue);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+}
+
+#fb {
+  background: -webkit-linear-gradient(45deg, blue, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#whatsapp {
+  background: -webkit-linear-gradient(45deg, green, green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#linkedin {
+  background: -webkit-linear-gradient(45deg, blue, skyblue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#snapchat {
+  background: -webkit-linear-gradient(45deg, yellow, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#instagram {
+  background: -webkit-linear-gradient(45deg, blue, pink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#twitter {
+  background: -webkit-linear-gradient(45deg, skyblue, skyblue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-health {
+  background-image: url("../img/download(2).png");
+  width: 100%;
+  height: 100%;
+}
+
+.health-tips-tab img {
+  transition: 0.2s ease;
+}
+
+.health-tips-tab img:hover {
+  transform: scale(1.2);
+  transition: 0.2s ease;
+}
+
+#myVideo {
+  width: 100%;
+  /* position: fixed;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        margin-top: 98px;
+        transform: translateX(-50%) translateY(-50%); */
+}
+
+.gallery .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.about-us i {
+  color: grey;
+}
+
+.about-us i:hover {
+  color: #fff;
+}
+
+.gallery .row .column img {
+  transition: 0.2s ease;
+  border-radius: 10px;
+}
+
+.gallery .row .column img:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease;
+  -webkit-box-shadow: 3px 1px 11px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 1px 11px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 1px 11px 0px rgba(0, 0, 0, 0.75);
+}
+
+.image-gallery {
+  margin-top: 10%;
+}
+
+.main-pallete h1 {
+  /* text-shadow: 4px 1px 3px rgba(150, 150, 150, 1); */
+  text-shadow: 4px 1px 2px rgba(150, 150, 150, 1);
+}
+
+.health-counselling-heading h1 {
+  font-size: 70px;
+}
+
+.paralax-section {
+  background-image: url("../img/kelly-sikkema-IZOAOjvwhaM-unsplash.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.workout-from-home-heading h1 {
+  font-size: 70px;
+  color: #fff;
+}
+
+.workout-from-home-body h2 {
+  color: #fff;
+}
+
+.workout-from-home-images img {
+  width: 100px;
+  height: 100px;
+  transition: 0.2s ease;
+}
+
+.workout-from-home-images img:hover {
+  transform: scale(1.2);
+  transition: 0.2s ease;
+}
+
+.flaticon-instagram:before {
+  font-size: 30px;
+}
+
+.advice-panel {
+  background-color: #dddddd;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.75);
+  /* background-image:url('img/bg-advice.png'); */
+}
+/* 
+      .contact-form{
+    background: #fff;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 70%;
+}
+.contact-form .form-control{
+    border-radius:1rem;
+}
+.contact-image{
+    text-align: center;
+}
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+    transform: rotate(29deg);
+}
+.contact-form form{
+    padding: 14%;
+}
+.contact-form form .row{
+    margin-bottom: -7%;
+}
+.contact-form h3{
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
+    color: #0062cc;
+}
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
+} */
+
+.advice-panel .contact-form input,
+.advice-panel .contact-form textarea {
+  border-radius: 1rem;
+}
+
+/*  THIS ANIMATION NEEDS LABEL BENEATH AN INPUT TAG BECAUSE THE GENEREAL SIBLING SELECTOR WILL SELECT ONLY ITS NEXT SIBING */
+/* .advice-panel .form-group .contact-form input:focus ~ .contact-form .form-group label + 
+.advice-panel .form-group .contact-form input:valid ~ .contact-form .form-group label
+{
+  text-align:center;
+  transition:.2s ease;
+} */
+
+.advice-panel {
+  padding: 10px;
+  transition: 0.2s ease;
+}
+
+.contact-form h3 {
+  text-align: center;
+  color: #18b0b0;
+  font-size: 50px;
+  transition: 0.2s ease;
+}
+
+.advice-panel .contact-form textarea {
+  height: 150px;
+  transition: 0.2s ease;
+}
+
+.submit_btn {
+  width: 100%;
+  height: 50px;
+  background-color: #18b0b0;
+  border: none;
+  margin-top: 5%;
+  transition: 0.2s ease;
+}
+
+.submit_btn:hover {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  border: 2px solid #18b0b0;
+  color: #18b0b0;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.advice-panel {
+  background-image: url("../img/frm-bg.png");
+  background-size: cover;
+}
+
+.error {
+  border: 2px solid #d92027;
+  transition: 0.2s ease;
+  color: #d92027;
+}
+
+.success {
+  border: 2px solid #a8df65;
+  transition: 0.2s ease;
+  color: #a8df65;
+}
+
+.msg {
+  color: #d92027;
+  font-size: 15px;
+}
+
+/* ###################################################################################################
+      ######################################################################################################
+      ######################################################################################################
+      #################################### MEDIA QUERY STARTS HERE ######################################### */
+
+@media only screen and (max-width: 1556px) {
+  .main-pallete .row h1 {
+    font-size: 90px;
+    margin-top: 25%;
+  }
+
+  .carousel-inner {
+    height: 600px;
+  }
+
+  .carousel-indicators {
+    bottom: 0%;
+  }
+
+  .circle-pic {
+    /* margin-left: 17%;
+          margin-top: 10%; */
+    display: block;
+    margin: 0 auto;
+    transition: 0.2s ease;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    /* width: 100px;
+          height: 100px; */
+    transition: 0.2s ease;
+  }
+
+  .health-tips-tab-heading h1 {
+    font-size: 80px;
+    transition: 0.2s ease;
+  }
+
+  .health-tips-tab .health-tips-tab-img p {
+    font-size: 40px;
+    transition: 0.2s ease;
+  }
+
+  .about-us-speech h3 {
+    font-size: 20px;
+    margin-top: 5%;
+  }
+
+  .about-us-speech h2 {
+    font-size: 35px;
+  }
+
+  .about-us i {
+    font-size: 40px;
+    margin-top: 5%;
+    text-align: center;
+    transition: 0.2s ease;
+    margin-left: 40%;
+  }
+
+  .contact-me i {
+    margin-left: 50%;
+    font-size: 40px;
+  }
+
+  .contact-me h1 {
+    font-size: 70px;
+  }
+
+  .contact-me h2 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .contact-me h3 {
+    font-size: 20px;
+  }
+
+  .contact-me i {
+    margin-top: 5%;
+  }
+
+  .health-counselling-heading h1 {
+    font-size: 70px;
+  }
+
+  .health-counselling-body h2 {
+    font-size: 25px;
+    margin-top: 5%;
+    transition: 0.2s ease;
+  }
+
+  .workout-from-home-heading h1 {
+    font-size: 70px;
+    color: #fff;
+    transition: 0.2s ease;
+  }
+
+  .workout-from-home-body h2 {
+    color: #fff;
+    font-size: 20px;
+    transition: 0.2s ease;
+  }
+
+  .workout-from-home-images img {
+    display: block;
+    margin: 0 auto;
+    transition: 0.2s ease;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    width: 150px;
+    height: 150px;
+    transition: 0.2s ease;
+  }
+
+  .workout-from-home-images h3 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .circle-pic {
+    width: 400px;
+    height: 400px;
+  }
+
+  .circle-pic img {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  .carousel-inner {
+    height: 500px;
+  }
+
+  .carousel-indicators {
+    bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .main-pallete .row h1 {
+    font-size: 90px;
+    margin-top: 40%;
+    transition: 0.5s ease-in-out;
+  }
+
+  .carousel-inner {
+    height: 500px;
+  }
+
+  .carousel-indicators {
+    bottom: 0%;
+  }
+
+  .circle-pic {
+    /* margin-left: 17%;
+          margin-top: 10%; */
+    display: block;
+    margin: 0 auto;
+    transition: 0.2s ease;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    /* width: 100px;
+          height: 100px; */
+    transition: 0.2s ease;
+  }
+
+  .health-tips-tab-heading h1 {
+    font-size: 60px;
+    transition: 0.2s ease;
+  }
+
+  .contact-me i {
+    margin-left: 50%;
+    font-size: 30px;
+    background: -webkit-linear-gradient(45deg, purple, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .contact-me h1 {
+    font-size: 70px;
+    transition: 0.2s ease;
+  }
+
+  .contact-me h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    transition: 0.2s ease;
+  }
+
+  .contact-me h3 {
+    font-size: 20px;
+    transition: 0.2s ease;
+  }
+
+  .contact-me i {
+    margin-top: 5%;
+    transition: 0.2s ease;
+  }
+
+  .health-tips-tab .health-tips-tab-img p {
+    font-size: 40px;
+    transition: 0.2s ease;
+  }
+
+  .about-us-speech h3 {
+    font-size: 15px;
+    margin-top: 5%;
+    transition: 0.2s ease;
+  }
+
+  .about-us-speech h2 {
+    font-size: 25px;
+    transition: 0.2s ease;
+  }
+
+  .about-us i {
+    font-size: 40px;
+    margin-top: 5%;
+    text-align: center;
+    transition: 0.2s ease;
+    margin-left: 40%;
+  }
+
+  .health-counselling-heading h1 {
+    font-size: 50px;
+    transition: 0.2s ease;
+  }
+
+  .health-counselling-body h2 {
+    font-size: 20px;
+    margin-top: 5%;
+    transition: 0.2s ease;
+  }
+
+  .workout-from-home-heading h1 {
+    font-size: 50px;
+    color: #fff;
+    transition: 0.2s ease;
+  }
+
+  .workout-from-home-body h2 {
+    color: #fff;
+    font-size: 17px;
+    transition: 0.2s ease;
+  }
+
+  .workout-from-home-images h3 {
+    font-size: 30px;
+  }
+
+  .workout-from-home-images img {
+    display: block;
+    margin: 0 auto;
+    transition: 0.2s ease;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    width: 150px;
+    height: 150px;
+    transition: 0.2s ease;
+  }
+
+  .advice-panel {
+    width: 100%;
+    transition: 0.2s ease;
+  }
+
+  .advice-panel .contact-form h3 {
+    font-size: 30px;
+    transition: 0.2s ease;
+  }
+}
+
+@media only screen and (max-width: 883px) {
+  .menu-bar i {
+    display: block;
+  }
+
+  /* .rightmenu ul {
+          display: none;
+        } */
+
+  .rightmenu ul {
+    position: absolute;
+    right: 0px;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #b9ebcc;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    top: 8vh;
+    z-index: 1;
+    transition: transform 0.2s ease;
+  }
+
+  .rightmenu ul li {
+    font-size: 20px;
+  }
+
+  .menu-bar i {
+    position: absolute;
+    right: 10%;
+    top: 10px;
+    line-height: 30px;
+  }
+
+  .burger {
+    display: block;
+    z-index: 10;
+  }
+
+  .list-ul {
+    visibility: hidden;
+    display: none;
+  }
+
+  .carousel-inner {
+    height: 400px;
+  }
+
+  .carousel-indicators {
+    bottom: 10%;
+  }
+
+  .main-pallete .row h1 {
+    font-size: 70px;
+    margin-top: 30%;
+    transition: 0.5s ease-in-out;
+  }
+
+  .circle-pic {
+    margin-left: 20%;
+    /* margin-top: 10%; */
+  }
+
+  .health-tips-tab-heading h1 {
+    font-size: 65px;
+    transition: 0.2s ease;
+  }
+
+  .health-tips-tab .health-tips-tab-img p {
+    font-size: 35px;
+    transition: 0.2s ease;
+  }
+
+  .contact-me i {
+    margin-left: 50%;
+    font-size: 30px;
+    background: -webkit-linear-gradient(45deg, purple, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .contact-me h1 {
+    font-size: 50px;
+    transition: 0.2s ease;
+  }
+
+  .contact-me h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    transition: 0.2s ease;
+  }
+
+  .contact-me h3 {
+    font-size: 20px;
+    transition: 0.2s ease;
+  }
+
+  .contact-me i {
+    margin-top: 5%;
+    transition: 0.2s ease;
+  }
+
+  .about-us-speech h3 {
+    font-size: 15px;
+    transition: 0.2s ease;
+  }
+
+  .about-us-speech h2 {
+    font-size: 25px;
+    transition: 0.2s ease;
+  }
+
+  .about-us i {
+    font-size: 35px;
+    margin-top: 5%;
+    text-align: center;
+    transition: 0.2s ease;
+    margin-left: 40%;
+  }
+
+  .health-counselling-heading h1 {
+    font-size: 50px;
+    transition: 0.2s ease;
+  }
+
+  .health-counselling-body h2 {
+    font-size: 17px;
+    margin-top: 5%;
+    transition: 0.2s ease;
+  }
+
+  .workout-from-home-heading h1 {
+    font-size: 50px;
+    color: #fff;
+    transition: 0.2s ease;
+  }
+
+  .workout-from-home-body h2 {
+    color: #fff;
+    font-size: 17px;
+    transition: 0.2s ease;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-bar i {
+    position: absolute;
+    right: 10%;
+    top: 10px;
+    line-height: 30px;
+  }
+
+  .burger {
+    display: block;
+    z-index: 10;
+  }
+
+  .list-ul {
+    visibility: hidden;
+    display: none;
+  }
+
+  .carousel-inner {
+    height: 400px;
+  }
+
+  .carousel-indicators {
+    bottom: 10%;
+  }
+
+  .main-pallete .row h1 {
+    font-size: 60px;
+    margin-top: 0%;
+    transition: 0.5s ease-in-out;
+    text-align: center;
+  }
+
+  .circle-pic {
+    /* margin-left: 17%;
+          margin-top: 10%; */
+    display: block;
+    margin: 0 auto;
+    transition: 0.2s ease;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    /* width: 100px;
+          height: 100px; */
+    transition: 0.2s ease;
+  }
+
+  .health-tips-tab-heading h1 {
+    font-size: 60px;
+    transition: 0.2s ease;
+  }
+
+  .health-tips-tab .health-tips-tab-img p {
+    font-size: 35px;
+    transition: 0.2s ease;
+  }
+
+  .contact-me i {
+    margin-left: 50%;
+    font-size: 30px;
+    background: -webkit-linear-gradient(45deg, purple, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .contact-me h1 {
+    font-size: 50px;
+    transition: 0.2s ease;
+  }
+
+  .contact-me h2 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .contact-me i {
+    margin-top: 5%;
+  }
+
+  .about-us-speech h3 {
+    font-size: 15px;
+    margin-top: 5%;
+  }
+
+  .about-us i {
+    font-size: 35px;
+    margin-top: 5%;
+    text-align: center;
+    transition: 0.2s ease;
+    margin-left: 40%;
+  }
+
+  .contact-me h1 {
+    font-size: 50px;
+  }
+
+  .contact-me h2 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .contact-me i {
+    margin-top: 5%;
+  }
+
+  .health-counselling-heading h1 {
+    font-size: 50px;
+  }
+
+  .health-counselling-body h2 {
+    font-size: 17px;
+    margin-top: 5%;
+    transition: 0.2s ease;
+  }
+
+  .workout-from-home-heading h1 {
+    font-size: 50px;
+    color: #fff;
+  }
+
+  .workout-from-home-body h2 {
+    color: #fff;
+    font-size: 17px;
+  }
+
+  .workout-from-home-images img {
+    display: block;
+    margin: 0 auto;
+    transition: 0.2s ease;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    width: 100px;
+    height: 100px;
+    transition: 0.2s ease;
+  }
+
+  .advice-panel {
+    width: 80%;
+    transition: 0.2s ease;
+  }
+
+  .advice-panel .contact-form h3 {
+    font-size: 30px;
+    transition: 0.2s ease;
+  }
+}
+
+@media only screen and (max-width: 624px) {
+  .carousel-inner {
+    height: 350px;
+  }
+
+  .carousel-indicators {
+    bottom: 5%;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .carousel-inner {
+    height: 350px;
+  }
+
+  .carousel-indicators {
+    bottom: 13%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .leftmenu h1 a {
+    font-size: 40px;
+  }
+
+  .burger {
+    display: block;
+    z-index: 10;
+  }
+
+  /* .rightmenu ul {
+          display: none;
+        } */
+
+  .rightmenu ul {
+    position: absolute;
+    right: 0px;
+    flex-direction: column;
+    height: 92vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    top: 7vh;
+    z-index: 100;
+    border-radius: 10px;
+    /* transition: transform 0.2s ease; */
+  }
+
+  .list-ul {
+    visibility: hidden;
+    display: none;
+  }
+
+  .rightmenu ul li {
+    font-size: 20px;
+  }
+
+  .carousel-inner {
+    height: 350px;
+  }
+
+  .carousel-indicators {
+    bottom: 20%;
+  }
+
+  .health-tips-tab-heading h1 {
+    font-size: 50px;
+    transition: 0.2s ease;
+  }
+
+  .health-tips-tab .health-tips-tab-img p {
+    font-size: 30px;
+    transition: 0.2s ease;
+  }
+
+  .contact-me i {
+    margin-left: 50%;
+    font-size: 30px;
+  }
+
+  .contact-me h1 {
+    font-size: 50px;
+  }
+
+  .contact-me h2 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .contact-me i {
+    margin-top: 5%;
+  }
+
+  .about-us-speech h3 {
+    font-size: 15px;
+    margin-top: 5%;
+  }
+
+  .about-us i {
+    font-size: 35px;
+    margin-top: 5%;
+    text-align: center;
+    transition: 0.2s ease;
+    margin-left: 40%;
+  }
+
+  .health-counselling-heading h1 {
+    font-size: 50px;
+  }
+
+  .health-counselling-body h2 {
+    font-size: 17px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    transition: 0.2s ease;
+  }
+
+  .workout-from-home-heading h1 {
+    font-size: 50px;
+    color: #fff;
+    transition: 0.2s ease;
+  }
+
+  .workout-from-home-body h2 {
+    color: #fff;
+    font-size: 17px;
+    transition: 0.2s ease;
+  }
+
+  .workout-from-home-images img {
+    display: block;
+    margin: 0 auto;
+    transition: 0.2s ease;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    width: 100px;
+    height: 100px;
+    transition: 0.2s ease;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  .advice-panel {
+    width: 80%;
+    transition: 0.2s ease;
+  }
+
+  .advice-panel .contact-form h3 {
+    font-size: 30px;
+    transition: 0.2s ease;
+  }
+}
+
+.navigation.open {
+  transform: translateX(0%);
+  transition: transform 0.5s ease;
+  visibility: visible;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
 }

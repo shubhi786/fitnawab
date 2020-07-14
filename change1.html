@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fit Nawab</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/docs/assets/vendors/jquery.min.js"></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    /> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" type="text/css" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/icofont.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/icofont.css" type="text/css" />
+    <link rel="stylesheet" href="font/flaticon.css" type="text/css" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/fontawesome.min.js"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="js/jquery-3.4.1.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <nav class="">
+      <div class="navbar menu position-fixed w-100" style="z-index: 50;">
+        <div class="leftmenu">
+          <h1 class="text-capitalize">
+            <a href="index.php" class="text-decoration-none">focus fit</a>
+          </h1>
+        </div>
+
+        <!-- <input type="check" id="checkbox" /> -->
+        <!-- <span class="menu-bar"
+          ><i class="fa fa-bars burger" aria-hidden="true"></i>
+        </span> -->
+
+        <div class="rightmenu">
+          <ul class="list-ul nav-active navigation">
+            <a href="index.php">
+              <li class="list-block">Home</li>
+            </a>
+
+            <a href="#health-tips">
+              <li class="list-block">Health-Tips</li>
+            </a>
+
+            <a href="#contact-me">
+              <li class="list-block">Contact</li>
+            </a>
+
+            <a href="#question">
+              <li class="list-block">Ask A Question</li>
+            </a>
+
+            <a href="php/admin.php">
+              <li class="list-block">Admin</li>
+            </a>
+          </ul>
+
+          <div class="burger">
+            <div class="burger-line line1"></div>
+            <div class="burger-line line2"></div>
+            <div class="burger-line line3"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section>
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,128L34.3,149.3C68.6,171,137,213,206,229.3C274.3,245,343,235,411,208C480,181,549,139,617,106.7C685.7,75,754,53,823,42.7C891.4,32,960,32,1029,53.3C1097.1,75,1166,117,1234,133.3C1302.9,149,1371,139,1406,133.3L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+        ></path>
+      </svg> -->
+    </section>
+
+    <section class="stay-fit-bg">
+      <div class="main-pallete">
+        <!-- <div class="row container-fluid">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-1 text-center">
+            <h1 class="text-capitalize">stay fit</h1>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-2">
+            <div class="circle-pic">
+              <img src="img/main.jpeg" alt="main-pic" class="img-fluid" />
+            </div>
+          </div>
+        </div> -->
+        <!--Carousel Wrapper-->
+        <div
+          id="video-carousel-example"
+          class="carousel slide carousel-fade"
+          data-ride="carousel"
+        >
+          <!--Indicators-->
+          <ol class="carousel-indicators">
+            <li
+              data-target="#video-carousel-example"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#video-carousel-example" data-slide-to="1"></li>
+            <li data-target="#video-carousel-example" data-slide-to="2"></li>
+          </ol>
+          <!--/.Indicators-->
+          <!--Slides-->
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <video class="video-fluid" autoplay loop muted>
+                <source
+                  src="img/vid/NO EXCUSES - Best Motivational Video(1080P_HD).mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div class="carousel-item">
+              <video class="video-fluid" autoplay loop muted>
+                <source
+                  src="img/vid/Andrei Deiu - No More Reps After Failure -- _ Fitn(1080P_HD).mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div class="carousel-item">
+              <video class="video-fluid" autoplay loop muted>
+                <source
+                  src="img/vid/ANDREI DEIU -- Alan Walker  - Play - Fitness Motiv(1080P_HD).mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+          <!--/.Slides-->
+          <!--Controls-->
+          <a
+            class="carousel-control-prev"
+            href="#video-carousel-example"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#video-carousel-example"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+          <!--/.Controls-->
+        </div>
+        <!--Carousel Wrapper-->
+      </div>
+    </section>
+
+    <section
+      class="bg-health"
+      style="background-color: #abf0e9;"
+      id="health-tips"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,128L34.3,112C68.6,96,137,64,206,58.7C274.3,53,343,75,411,101.3C480,128,549,160,617,144C685.7,128,754,64,823,80C891.4,96,960,192,1029,224C1097.1,256,1166,224,1234,181.3C1302.9,139,1371,85,1406,58.7L1440,32L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"
+        ></path>
+      </svg>
+      <div class="health-tips-tab mt-5 container">
+        <div class="health-tips-tab-heading">
+          <h1 class="text-center text-capitalize">health tips</h1>
+        </div>
+
+        <div class="row container mt-5">
+          <div
+            class="col-12 col-sm-12 col-md-4 col-lg-4 order-1 text-capitalize text-center"
+          >
+            <div class="health-tips-tab-img">
+              <img src="img/harvest.svg" alt="diet-plans" />
+              <p class="text-center">diet plans</p>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-4 col-lg-4 order-2 text-capitalize text-center"
+          >
+            <div class="health-tips-tab-img">
+              <img src="img/workout-machine.svg" alt="workout-tips" />
+              <p class="text-center">workout plans</p>
+            </div>
+          </div>
+          <div
+            class="col-12 col-sm-12 col-md-4 col-lg-4 order-3 text-capitalize text-center"
+          >
+            <div class="health-tips-tab-img">
+              <img src="img/bulb.svg" alt="special-tips" />
+              <p class="text-center">special tips</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,256L40,256C80,256,160,256,240,234.7C320,213,400,171,480,154.7C560,139,640,149,720,181.3C800,213,880,267,960,272C1040,277,1120,235,1200,197.3C1280,160,1360,128,1400,112L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+
+    <section id="health-counselling">
+      <div class="health-counselling-heading container">
+        <h1 class="text-center text-capitalize">health counselling</h1>
+      </div>
+
+      <div class="health-counselling-body">
+        <h2 class="text-center text-capitalize container">
+          health counselling will be held occasionally on my social media
+          handles or on my blog. Health counselling provides us the motivation
+          and the precise ways to do the workout. this will help many of you as
+          a reason to lift the weights. some of us are full of energy but cannot
+          do without a push start, then this will affect those as a push start.
+          i am not perfect but still i am living a perfect life by understanding
+          some basic concepts of life. bodybuilding does not include only
+          physical training , it includes mental training as well. you must be
+          thinking how? every bodybuilder needs a muscle mind connection while
+          lifting.
+
+          <p
+            class="text-center text-capitalize container"
+            style="font-style: italic; font-family: 'courier new';"
+          >
+            "Physical actvity enhances positive energy"
+          </p>
+        </h2>
+      </div>
+    </section>
+
+    <section class="paralax-section mt-5">
+      <div class="workout-from-home-heading">
+        <h1 class="text-center text-capitalize container">workout from home</h1>
+      </div>
+
+      <div class="workout-from-home-body container">
+        <h2 class="container text-center text-capitalize">
+          Nowadays , we all know that an unwanted virus is roaming on the
+          streets. we need to keep ourselves safe from it. because of this virus
+          (covid-19) all the gym or gathering points are closed. but it does not
+          mean that we cannot workout . we can do the workout at our homes.
+        </h2>
+
+        <div class="container workout-from-home-images">
+          <div class="row container mt-5 mb-5 pb-5">
+            <div
+              class="col-12 col-sm-12 col-md-4 col-lg-4 order-1 text-capitalize text-center"
+            >
+              <div class="">
+                <img src="img/dumbell.png" alt="diet-plans" />
+                <h3 class="text-center text-capitalize text-white">
+                  diet plans
+                </h3>
+              </div>
+            </div>
+            <div
+              class="col-12 col-sm-12 col-md-4 col-lg-4 order-2 text-capitalize text-center"
+            >
+              <div class="">
+                <img src="img/push-up.png" alt="workout-tips" />
+                <h3 class="text-center text-capitalize text-white">
+                  workout plans
+                </h3>
+              </div>
+            </div>
+            <div
+              class="col-12 col-sm-12 col-md-4 col-lg-4 order-3 text-capitalize text-center"
+            >
+              <div class="">
+                <img src="img/banana.png" alt="special-tips" />
+                <h3 class="text-center text-capitalize text-white">
+                  special tips
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-me">
+      <div class="contact-me text-capitalize container">
+        <div class="contact-me-tab container">
+          <h1 class="contact-me-heading text-center text-capitalize mb-4">
+            Contact me
+          </h1>
+
+          <h2 class="text-center text-capitalize mb-5">
+            feel free to contact me on my social media handles .
+          </h2>
+        </div>
+
+        <div class="row container mb-5 contact-me">
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+            <i id="fb" class="fa fa-facebook-official" aria-hidden="true"></i>
+            <h3 class="text-center">Nawab Kashyap</h3>
+          </div>
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+            <i id="whatsapp" class="fa fa-whatsapp" aria-hidden="true"></i>
+            <h3 class="text-center">95171-46234</h3>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+            <i
+              id="linkedin"
+              class="fa fa-linkedin-square"
+              aria-hidden="true"
+            ></i>
+            <h3 class="text-center">NawabKashyap</h3>
+          </div>
+        </div>
+
+        <div class="row container">
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+            <i
+              id="snapchat"
+              class="fa fa-snapchat-square"
+              aria-hidden="true"
+            ></i>
+            <h3 class="text-center">Nawabkashyap</h3>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+            <i id="twitter" class="fa fa-twitter-square" aria-hidden="true"></i>
+            <h3 class="text-center">Nawabkashyap</h3>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+            <i
+              id="instagram"
+              class="fa fa-instagram border-0"
+              aria-hidden="true"
+            ></i>
+            <h3 class="text-center">@nawabkashyapofficial</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section>
+      <div class="video-tab">
+        <div class="paralax">
+          <div class="video-player">
+            <video autoplay muted loop id="myVideo" height="500px">
+              <source src="img/vid/video.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section
+      class="image-gallery"
+      style="
+        background-image: url('img/download (2).png');
+        background-size: 100% 100%;
+      "
+    >
+      <div class="gallery container">
+        <div class="row">
+          <div class="column">
+            <img src="img/1.jpg" alt="1" />
+
+            <img src="img/3.jpeg" alt="3" />
+            <img src="img/7.jpeg" alt="7" />
+          </div>
+
+          <div class="column">
+            <img src="img/8.jpeg" alt="8" />
+
+            <img src="img/4.jpeg" alt="4" />
+          </div>
+
+          <div class="column">
+            <img src="img/9.jpg" alt="9" />
+            <img src="img/6.jpeg" alt="6" />
+          </div>
+
+          <div class="column">
+            <img src="img/2.jpg" alt="2" />
+            <img src="img/5.jpg" alt="5" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5 advice-panel mt-5 container" style="" id="question">
+      <div class="container contact-form">
+        <form method="post" class="form-try" onsubmit="return formInput()">
+          <h3 class="text-center text-capitalize font-weight-bold">
+            Drop Me a Message
+          </h3>
+          <div class="row">
+            <div
+              class="col-md-12 col-sm-12 col-12 col-lg-12 order-1 order-sm-1"
+            >
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input
+                  type="text"
+                  name="fname"
+                  class="form-control fname"
+                  placeholder="Your Name *"
+                  id="username"
+                  value=""
+                />
+                <span class="msg" id="namemsg"></span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input
+                  type="text"
+                  name="phone"
+                  class="form-control phone"
+                  placeholder="Your phone *"
+                  id="mobileno"
+                  value=""
+                />
+                <span class="msg" id="mobilemsg"></span>
+              </div>
+              <div class="form-group">
+                <label for="age">Age</label>
+                <input
+                  type="text"
+                  name="age"
+                  class="form-control age"
+                  placeholder="Your Age *"
+                  id="age"
+                  value=""
+                />
+                <span class="msg" id="agemsg"></span>
+              </div>
+              <div class="form-group">
+                <label for="content">Question</label>
+                <textarea
+                  name="content"
+                  class="form-control message"
+                  placeholder="Your Message *"
+                  id="message"
+                ></textarea>
+                <span class="msg" id="msgmsg"></span>
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="submit"
+                  name="input"
+                  class="submit_btn"
+                  value="Send Message"
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section style="background-color: #393e46;" class="bg-about">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,320L40,288C80,256,160,192,240,181.3C320,171,400,213,480,240C560,267,640,277,720,261.3C800,245,880,203,960,160C1040,117,1120,75,1200,85.3C1280,96,1360,160,1400,192L1440,224L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"
+        ></path>
+      </svg>
+      <div class="about-us container" id="about-us">
+        <h1 class="heading text-capitalize text-center text-light">about us</h1>
+
+        <div class="div about-us-speech">
+          <h3 class="text-center text-capitalize container text-light">
+            Hello there!!! I am ________. As you have seen above , you can guess
+            who am i ? I am a professional dietition , physical trainer , and
+            body maintainence expert . I am providing some of the best tips and
+            tricks that will shape your body like you ever dreamt of. Our body
+            needs time and diet , if both these are provided in fine ratio then
+            your body will be no less than an aesthatic body. You can follow me
+            on my social media handles which are given below. This page is about
+            learning some methods of perfection , planning a wonderful and
+            healthy diet , focusing on our goal , precise physical training.
+          </h3>
+
+          <h2 class="text-light text-center text-capitalize">
+            stay healthy | stay fit
+          </h2>
+        </div>
+
+        <div class="container mt-3 pb-3">
+          <div class="row container">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+              <a href="#">
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i
+              ></a>
+            </div>
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+              <a href="https://www.instagram.com/nawabkashyapofficial/?hl=en">
+                <i class="flaticon-instagram"></i>
+              </a>
+            </div>
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+              <a href="https://www.facebook.com/nawab.kashyap.5">
+                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let app = function () {
+        var btn = document.querySelector(".burger");
+        var menu = document.querySelector(".navigation");
+        let bgAbout = document.querySelector(".bg-about");
+
+        btn.addEventListener("click", toggleMenu);
+        menu.addEventListener("click", toggleMenu);
+
+        function toggleMenu() {
+          if (menu.classList.contains("open")) {
+            menu.classList.remove("open");
+          } else {
+            menu.classList.add("open");
+          }
+
+          btn.classList.toggle("toggle");
+        }
+      };
+
+      //  let valid = function () {
+
+      //   //  console.log(fname , "fname");
+
+      //   //  form.addEventListener('submit' , function (e){
+
+      //   //    e.preventDefault();
+
+      //   //     formInput();
+
+      //   //  });
+
+      //  } // valid function ends here
+
+      let run = function () {
+        app();
+        //  valid();
+      };
+
+      run();
+
+      function formInput() {
+        const fname = document.querySelector(".fname");
+        const phone = document.querySelector(".phone");
+        const message = document.querySelector(".message");
+        const age = document.querySelector(".age");
+        const form = document.querySelector(".form-try");
+
+        var returnval = true;
+
+        const fnameValue = fname.value.trim();
+        const phoneValue = phone.value.trim();
+        const messageValue = message.value.trim();
+        const ageValue = age.value.trim();
+
+        //  console.log(fname.parentElement);
+
+        if (fnameValue == "") {
+          showErrorMsg(fname, "Your Name must be filled");
+          returnval = false;
+        } else if (fnameValue.length < 2) {
+          showErrorMsg(fname, "Your Name must be greater than 2 digits");
+          returnval = false;
+        } else if (!isNaN(fnameValue)) {
+          showErrorMsg(fname, "Your Name must include some digits");
+          returnval = false;
+        } else {
+          showSuccessMsg(fname);
+        }
+
+        // PHONE VALIDATIONS
+
+        if (phoneValue == "") {
+          showErrorMsg(phone, "Phone number must be filled");
+          returnval = false;
+        } else if (isNaN(phoneValue)) {
+          showErrorMsg(phone, "Phone number must be in digits");
+          returnval = false;
+        } else if (phoneValue.length < 10 || phoneValue.length > 10) {
+          showErrorMsg(phone, "Phone number must be relevant");
+          returnval = false;
+        } else {
+          showSuccessMsg(phone);
+        }
+
+        //  AGE VALIDATION
+
+        if (ageValue == "") {
+          showErrorMsg(age, "Age must be filled");
+          returnval = false;
+        } else if (ageValue > 100) {
+          showErrorMsg(age, "Age must be lower than 100");
+          returnval = false;
+        } else if (ageValue < 1) {
+          showErrorMsg(age, "Age must be greater than 0");
+          returnval = false;
+        } else {
+          showSuccessMsg(age);
+        }
+
+        // MESSAGE  FUNCTIONS
+
+        if (messageValue == "") {
+          showErrorMsg(message, "Message cannot be blank");
+          returnval = false;
+        } else if (messageValue.length < 10) {
+          showErrorMsg(message, "Your Question must be greater than 10 words");
+          returnval = false;
+        } else {
+          showSuccessMsg(message);
+        }
+
+        // VALIDATING FUNCTIONS
+
+        function showErrorMsg(input, message) {
+          const inp = input.parentElement;
+          const msg = inp.querySelector(".msg");
+
+          msg.innerHTML = message;
+
+          input.classList.add("error");
+
+          return false;
+        }
+
+        function showSuccessMsg(input) {
+          const inp = input.parentElement;
+          const msg = inp.querySelector(".msg");
+
+          msg.innerHTML = "";
+
+          input.classList.add("success");
+        }
+
+        return returnval;
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+    <script src="js/aos.js" type="text/javascript"></script>
+  </body>
+</html>
